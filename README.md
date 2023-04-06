@@ -9,10 +9,10 @@ Need to make some extra cash this summer? Become a YardMe Host today! This appli
 
 ## Collaborators
 
-[Abigail Henderson](https://github.com/AGHenderson97)
-[Arnasia Jackson](https://github.com/Arnasia)
-[Montine Sproul](https://github.com/MontineSproul)
-[Marques Ivory](https://github.com/Maivory12)
+* [Abigail Henderson](https://github.com/AGHenderson97)
+* [Arnasia Jackson](https://github.com/Arnasia)
+* [Montine Sproul](https://github.com/MontineSproul)
+* [Marques Ivory](https://github.com/Maivory12)
 
 
 ### Mockup
