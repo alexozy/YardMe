@@ -76,7 +76,30 @@ export default function App() {
                 </a>
               </p>
             </MDBCol>
+            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+              <p>
+                <MDBIcon icon="home" className="me-2" />
+                Hosters City, NY 10012, US
+              </p>
+              <p>
+                <MDBIcon icon="envelope" className="me-3" />
+                hostshelp@yardmehost.com
+              </p>
+              <p>
+                <MDBIcon icon="phone" className="me-3" /> + 555 555 5555
+              </p>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
+      </section>
 
+      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+        © 2023 Copyright:
+        <a className='text-reset fw-bold' href='./Components/userLogin'>
+          YardMeHost.com
+        </a>
+      </div>
             
       
     </MDBFooter>
