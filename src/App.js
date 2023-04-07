@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Header from './Components/Header';
+import hostYards from "./Components/hostYard";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import myYards from "./Components/myYards";
