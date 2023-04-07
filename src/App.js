@@ -16,7 +16,7 @@ function App() {
       {selectedTab==='myYards'&& <myYards />}
       </main>
       <header className="App-header">
-        <img src="" className="App-logo" alt="logo" />
+        <img src="./yardMeLogo.png" className="App-logo" alt="logo" />
         <p>
           Easy cash is only one yard away!
         </p>
@@ -29,6 +29,7 @@ function App() {
          Become a Host!
         </a>
       </header>
+      {Footer()}
     </div>
   );
 }
