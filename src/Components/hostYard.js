@@ -58,7 +58,7 @@ function hostYardListing() {
       </Form.Select>
     </FloatingLabel>
 
-    <Button variant="primary" type="submit">
+    <Button variant="success" type="submit">
       Create!
     </Button>
   </Form>
