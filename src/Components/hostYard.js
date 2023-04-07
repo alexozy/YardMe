@@ -10,13 +10,13 @@ function hostYardListing() {
     <Form>
     <Row className="mb-3">
       <Form.Group as={Col} controlId="formGridEmail">
-        <Form.Label>Email</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Label>Name Your Yard!</Form.Label>
+        <Form.Control type="email" placeholder="i.e. Frolic Farm" />
       </Form.Group>
 
       <Form.Group as={Col} controlId="formGridPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Label>Hourly Cost</Form.Label>
+        <Form.Control type="password" placeholder="Enter Dollar Amount Only" />
       </Form.Group>
     </Row>
 
