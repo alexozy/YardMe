@@ -15,7 +15,7 @@ function yardNav() {
             <Nav.Link href="#link">PlaceHolder</Nav.Link>
             <NavDropdown title="Options" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">HostYard</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Placeholder</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">HostNew</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">LogOut</NavDropdown.Item>
             </NavDropdown>
           </Nav>
