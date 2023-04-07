@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Nav setSelectedTab={setSelectedTab}></Nav>
       <main>
-      
+      {selectedTab==='myYards'&& <myYards />}
       </main>
       <header className="App-header">
         <img src="" className="App-logo" alt="logo" />

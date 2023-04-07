@@ -13,10 +13,10 @@ function yardNav() {
           <Nav className="me-auto">
             <Nav.Link href="#home">MyYards</Nav.Link>
             <Nav.Link href="#link">PlaceHolder</Nav.Link>
-            <NavDropdown title="Host" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Create New Yard</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown title="Options" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">HostYard</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Placeholder</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">LogOut</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
