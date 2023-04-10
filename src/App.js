@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import myYards from "./Components/myYards";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 import './App.css';
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     <div className="App">
       <Nav setSelectedTab={setSelectedTab}></Nav>
       <main>
-      {selectedTab==='myYards'&& <myYards />}
+      {selectedTab==='myYards'&& < myYards />}
+      {selectedTab==='hostYards'&& <hostYards/>}
       </main>
       <header className="App-header">
         <img src="./yardMeLogo.png" className="App-logo" alt="logo" />
@@ -29,6 +31,7 @@ function App() {
          Become a Host!
         </a>
       </header>
+
       {Footer()}
     </div>
   );
