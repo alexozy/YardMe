@@ -11,7 +11,7 @@ import {
 
 function yardNav() {
   return (
-    <Navbar bg="success" expand="lg">
+    <Navbar bg="light" expand="lg">
       <Container>
       {/* navbar logo code for image import */}
         <MDBNavbarBrand href='#'>
@@ -23,7 +23,7 @@ function yardNav() {
             />
           </MDBNavbarBrand>
 
-        <Navbar.Brand href="#home">YardMe:Host Platform</Navbar.Brand>
+        <Navbar.Brand href="#home">YardMe:Host </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

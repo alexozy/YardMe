@@ -4,7 +4,7 @@ import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import myYards from "./Components/myYards";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { MDBBtn } from 'mdb-react-ui-kit';
 
 
 import './App.css';
@@ -23,14 +23,17 @@ function App() {
         <p>
           Easy cash is only one yard away!
         </p>
-        <a
+        <MDBBtn className='me-1' color='warning'>
+        Start Hosting!
+      </MDBBtn>
+        {/* <a
           className="App-link"
           href="./Components/userLogin"
           target="_blank"
           rel="noopener noreferrer"
         >
          Become a Host!
-        </a>
+        </a> */}
       </header>
 
       {Footer()}
