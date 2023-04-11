@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   MDBBtn,
   MDBContainer,
@@ -13,9 +13,20 @@ import {
 from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
+import MyYards from './MyYards';
 
 
 function UserLogin() {
+  const [page, setPage] = useState("userLogin")
+  function loggedIn() {
+    if (page === "MyYards") {
+      return (
+  <div>
+       <MyYards/>
+  </div>
+)
+}
+} 
   return (
     
            <div className="user-login">
@@ -74,7 +85,7 @@ function UserLogin() {
                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember Me' />
               </div>
 
-              <MDBBtn className='w-100 mb-4' size='md'  color='warning'>Login</MDBBtn>
+              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> loggedIn('MyYards')}>Login</MDBBtn>
              
               <div className="text-center">
               <p>Need to make some extra cash this summer?</p>
