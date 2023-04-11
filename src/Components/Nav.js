@@ -32,6 +32,7 @@ function yardNav() {
             <NavDropdown title="Options" id="basic-nav-dropdown">
               {/* <NavDropdown.Item href="#action/3.1">HostYard</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">HostNew</NavDropdown.Item> */}
+               <NavDropdown.Item href="#action/3.3">LogIn</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">LogOut</NavDropdown.Item>
             </NavDropdown>
           </Nav>

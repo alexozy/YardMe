@@ -19,12 +19,12 @@ function App() {
       {selectedTab==='hostYards'&& <hostYards/>}
       </main>
       <header className="App-header">
-        <img src="./yardMeLogo.png" className="App-logo" alt="logo" />
+        {/* <img src="./yardMeLogo.png" className="App-logo" alt="logo" /> */}
         <p>
-          Easy cash is only one yard away!
+        Need to make some extra cash this summer? Become a YardMe Host today! 
         </p>
         <MDBBtn className='me-1' color='warning'>
-        Start Hosting!
+        Host Your Yard!
       </MDBBtn>
         {/* <a
           className="App-link"
