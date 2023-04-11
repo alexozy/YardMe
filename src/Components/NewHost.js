@@ -14,26 +14,20 @@ from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import MyYards from './MyYards';
-import NewHost from './NewHost';
+import UserLogin from './UserLogin';
 
 
-function UserLogin() {
-  const [page, setPage] = useState("userLogin")
-  function loggedIn() {
-    if (page === "MyYards") {
-      return (
-  <div>
-       <MyYards/>
-  </div>
-)
-} else if (page === "NewHost") {
-  return (
-    <div>
-      <NewHost/>
-    </div>
-  )
-}
-} 
+function NewHost() {
+//   const [page, setPage] = useState("NewHost")
+//   function loggedIn() {
+//     if (page === "New") {
+//       return (
+//   <div>
+//        <MyYards/>
+//   </div>
+// )
+// }
+// } 
   return (
     
            <div className="user-login">
@@ -53,7 +47,7 @@ function UserLogin() {
          Become a Host!
         </a> */}
     
-    {/* changed class from user-header to user login */}
+    
     <MDBContainer fluid className='p-4 user-header overflow-hidden'>
 
       <MDBRow>
@@ -61,15 +55,15 @@ function UserLogin() {
         <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
 
           <h1 className="my-5 display-3 fw-bold ls-tight px-3" style={{color: 'hsl(218, 81%, 95%)'}}>
-            Easy cash is <br />
-            <span style={{color: 'hsl(218, 81%, 75%)'}}>only one yard away!</span>
+            New Host <br />
+            {/* <span style={{color: 'hsl(218, 81%, 75%)'}}>only one yard away!</span> */}
           </h1>
 
-          <p className='px-3' style={{color: 'hsl(218, 81%, 85%)'}}>
+          {/* <p className='px-3' style={{color: 'hsl(218, 81%, 85%)'}}>
           Living just outside the city has its perks! You can rent out your acres to 
           city dwellers with pets who need a yard for their furr-babies to run and explore!
           
-          </p>
+          </p> */}
 
         </MDBCol>
 
@@ -92,11 +86,11 @@ function UserLogin() {
                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember Me' />
               </div>
 
-              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> loggedIn('MyYards')}>Login</MDBBtn>
+              <MDBBtn className='w-100 mb-4' size='md'  color='warning' >Create Account</MDBBtn>
              
               <div className="text-center">
               <p>Need to make some extra cash this summer?</p>
-              <p><a onClick = {()=> loggedIn('NewHost')} color="blue">Click here</a> to become a YardMe Host today!</p>
+              <p><a >Click here</a> to become a YardMe Host today!</p>
               </div>
              
             </MDBCardBody>
@@ -107,9 +101,8 @@ function UserLogin() {
       </MDBRow>
 
     </MDBContainer>
-    {loggedIn()}
     </div>
   );
 }
 
-export default UserLogin;
+export default NewHost;

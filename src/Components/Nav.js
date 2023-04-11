@@ -2,19 +2,20 @@ import React, {useState} from 'react';
 import MyYards from './MyYards';
 import HostYard from './HostYard';
 import UserLogin from './UserLogin';
-import Container from 'react-bootstrap/Container';
-import logo from "../assets/yardMeLogo.png"
+import NewHost from './NewHost';
+// import Container from 'react-bootstrap/Container';
+// import logo from "../assets/yardMeLogo.png"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarBrand
-} from 'mdb-react-ui-kit';
+// import {
+//   MDBContainer,
+//   MDBNavbar,
+//   MDBNavbarBrand
+// } from 'mdb-react-ui-kit';
 
 
-// function YardNav() {
+
   function YardNav() {
     const [page, setPage] = useState("userLogin")
         function switchPage () {
@@ -37,6 +38,13 @@ import {
     </div>
 )
   }
+  else if (page === "NewHost") {
+    return (
+<div>
+     <NewHost/>
+</div>
+)
+}
 };
   
     return (
