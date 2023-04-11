@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import MyYards from './MyYards';
 import HostYard from './HostYard';
+import UserLogin from './UserLogin';
 import Container from 'react-bootstrap/Container';
 import logo from "../assets/yardMeLogo.png"
 import Nav from 'react-bootstrap/Nav';
@@ -28,10 +29,17 @@ function YardNav() {
             </div>
         )
       }
+      else if (page === "UserLogin") {
+        return (
+    <div>
+         <UserLogin/>
+    </div>
+)
+}
     }
   return (
     <div>
-      <header>
+      {/* <header> */}
     <Navbar bg="light" expand="lg">
       <Container>
       {/* navbar logo code for image import */}
@@ -53,14 +61,14 @@ function YardNav() {
             <NavDropdown title="Options" id="basic-nav-dropdown">
               {/* <NavDropdown.Item href="#action/3.1">HostYard</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">HostNew</NavDropdown.Item> */}
-               <NavDropdown.Item href="#action/3.3">LogIn</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">LogOut</NavDropdown.Item>
+               {/* <NavDropdown.Item href="#action/3.3">LogIn</NavDropdown.Item> */}
+              <NavDropdown.Item href="#action/3.3"><a onClick = {() => setPage('UserLogin')}>LogOut</a></NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </header>
+    {/* </header> */}
     {switchPage()}
     </div>
   );

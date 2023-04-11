@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+.user-login {
   background-image: url(/src/assets/background.jpg);
   background-size: cover;
   /* background: #282c34; */
@@ -23,10 +23,10 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #282c34;
 }
 .user-header {
-  background-image: url(/src/assets/userlogin.jpg);
+  /* background-image: url(/src/assets/userlogin.jpg); */
   background-size: cover;
   /* background: #282c34; */
   min-height: 100vh;
@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #282c34;
 }
 
 .App-link {
