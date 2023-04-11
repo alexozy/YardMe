@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   MDBBtn,
   MDBContainer,
@@ -11,9 +11,42 @@ import {
   MDBIcon
 }
 from 'mdb-react-ui-kit';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../App.css';
+import MyYards from './MyYards';
 
-function App() {
+
+function UserLogin() {
+  const [page, setPage] = useState("userLogin")
+  function loggedIn() {
+    if (page === "MyYards") {
+      return (
+  <div>
+       <MyYards/>
+  </div>
+)
+}
+} 
   return (
+    
+           <div className="user-login">
+        {/* <img src="./yardMeLogo.png" className="App-logo" alt="logo" /> */}
+        {/* <p>
+        Need to make some extra cash this summer? Click here to become a YardMe Host today! 
+        </p>
+        <MDBBtn className='me-1' color='warning'>
+        Host Your Yard!
+      </MDBBtn> */}
+        {/* <a
+          className="App-link"
+          href="./Components/userLogin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         Become a Host!
+        </a> */}
+    
+    
     <MDBContainer fluid className='p-4 user-header overflow-hidden'>
 
       <MDBRow>
@@ -43,21 +76,22 @@ function App() {
 
               <MDBRow>
                 <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
+                  <MDBInput wrapperClass='mb-4' label='Username' id='form1' type='text'/>
                 </MDBCol>
               </MDBRow>
 
-              <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email'/>
+              <MDBInput wrapperClass='mb-4' label='Password' id='form3' type='password'/>
               <div className='d-flex justify-content-center mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='I agree to the Host Agreement & Charges' />
+                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember Me' />
               </div>
 
-              <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
-
+              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> loggedIn('MyYards')}>Login</MDBBtn>
+             
               <div className="text-center">
-
+              <p>Need to make some extra cash this summer?</p>
+              <p><a >Click here</a> to become a YardMe Host today!</p>
               </div>
-
+             
             </MDBCardBody>
           </MDBCard>
 
@@ -66,7 +100,8 @@ function App() {
       </MDBRow>
 
     </MDBContainer>
+    </div>
   );
 }
 
-export default App;
+export default UserLogin;
