@@ -1,3 +1,6 @@
+import React, {useState} from 'react';
+import MyYards from './MyYards';
+import HostYard from './HostYard';
 import Container from 'react-bootstrap/Container';
 import logo from "../assets/yardMeLogo.png"
 import Nav from 'react-bootstrap/Nav';
@@ -9,8 +12,26 @@ import {
   MDBNavbarBrand
 } from 'mdb-react-ui-kit';
 
-function yardNav() {
+
+function YardNav() {
+  const [page, setPage] = useState("userLogin")
+        function switchPage () {
+            if (page === "MyYards") {
+                return (
+                <MyYards/>
+               
+             )
+        } else if (page === "HostYard") {
+                return (
+            <div>
+                 <HostYard/>
+            </div>
+        )
+      }
+    }
   return (
+    <div>
+      <header>
     <Navbar bg="light" expand="lg">
       <Container>
       {/* navbar logo code for image import */}
@@ -27,8 +48,8 @@ function yardNav() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">MyYards</Nav.Link>
-            <Nav.Link href="#link">HostYard</Nav.Link>
+            <Nav.Link href="#home"><a onClick = {()=> setPage('MyYards')}>MyYards</a></Nav.Link>
+            <Nav.Link href="#link"><a onClick = {()=> setPage('HostYard')}>HostYard</a></Nav.Link>
             <NavDropdown title="Options" id="basic-nav-dropdown">
               {/* <NavDropdown.Item href="#action/3.1">HostYard</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">HostNew</NavDropdown.Item> */}
@@ -39,7 +60,10 @@ function yardNav() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </header>
+    {switchPage()}
+    </div>
   );
 }
 
-export default yardNav;
+export default YardNav;

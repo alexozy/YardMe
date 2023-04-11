@@ -4,7 +4,7 @@ import { MDBRow, MDBCol } from 'mdb-react-ui-kit';
 
 // the listings will display here!
 // this is a 3 equal section grid; the yard cards will stack equally across.
-function myYards() {
+function MyYards() {
   return (
     <div> 
     <MDBRow>
@@ -41,5 +41,5 @@ function myYards() {
   );
 }
 
-export default myYards;
+export default MyYards;
 

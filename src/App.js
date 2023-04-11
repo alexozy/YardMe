@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import hostYards from "./Components/hostYard";
+import HostYards from "./Components/HostYard";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
-import myYards from "./Components/myYards";
+import MyYards from "./Components/MyYards";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MDBBtn } from 'mdb-react-ui-kit';
 
@@ -15,8 +15,8 @@ function App() {
     <div className="App">
       <Nav setSelectedTab={setSelectedTab}></Nav>
       <main>
-      {selectedTab==='myYards'&& < myYards />}
-      {selectedTab==='hostYards'&& <hostYards/>}
+      {/* {selectedTab==='myYards'&& < myYards />}
+      {selectedTab==='hostYards'&& <hostYards/>} */}
       </main>
       <header className="App-header">
         {/* <img src="./yardMeLogo.png" className="App-logo" alt="logo" /> */}
