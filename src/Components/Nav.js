@@ -49,7 +49,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
   
     return (
       <div> 
-        <div>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
@@ -63,7 +62,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
-      </div>
       {switchPage()}
       </div>
     )

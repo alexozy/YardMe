@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row';
 
 function HostYardListing() {
   return (
-
+    <div>
     <Form>
     <Row className="mb-3">
       <Form.Group as={Col} controlId="formGridEmail">
@@ -62,6 +62,7 @@ function HostYardListing() {
       Create!
     </Button>
   </Form>
+  </div>
   );
 }
 
