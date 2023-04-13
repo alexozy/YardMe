@@ -8,14 +8,23 @@ const userController = {
             console.log(err);
             res.status(400).json(err);
         });
-    };
+    }
 },
 
 // GET ID
-getUserById({ params}, res) {
-    User.findOne ({ _id: params.id})
-    // no user found error message
-    .then((dbData)=> {
-
-    })
-}
+getUserById ({ params }, res){
+    User.findOne({ _id: params.id })
+    // no user found error message below
+      .then((dbData) => {
+        if (!dbData) {
+          res.status(404).json({ message: "No User found with this id!" });
+          return;
+        }
+        res.json(dbData);
+      })
+      .catch((err) => {
+        console.log(err);
+        res.status(400).json(err);
+      });
+  },
+  
