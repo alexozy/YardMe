@@ -8,8 +8,8 @@ const userController = {
             console.log(err);
             res.status(400).json(err);
         });
-    }
-},
+    },
+
 
 // GET ID
 getUserById ({ params }, res){
@@ -27,4 +27,4 @@ getUserById ({ params }, res){
         res.status(400).json(err);
       });
   },
-  
+}
