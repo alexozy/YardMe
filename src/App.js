@@ -13,7 +13,7 @@ import UserLogin from './Components/UserLogin';
 import YardNav from './Components/Nav';
 
 function App() {
-  const [selectedTab, setSelectedTab] = useState("")
+  // const [selectedTab, setSelectedTab] = useState("")
   return (
     <div className="App">
           <div>

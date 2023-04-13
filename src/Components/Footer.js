@@ -16,18 +16,18 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="twitter" />
           </a>
-          <a href='' className='me-4 text-reset'>
+          {/* <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="google" />
-          </a>
+          </a> */}
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="instagram" />
           </a>
           <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="linkedin" />
           </a>
-          <a href='' className='me-4 text-reset'>
+          {/* <a href='' className='me-4 text-reset'>
             <MDBIcon fab icon="github" />
-          </a>
+          </a> */}
         </div>
       </section>
       <section className=''>

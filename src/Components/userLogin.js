@@ -14,6 +14,7 @@ from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import MyYards from './MyYards';
+import NewHost from './NewHost';
 
 
 function UserLogin() {
@@ -25,28 +26,18 @@ function UserLogin() {
        <MyYards/>
   </div>
 )
+} else if (page === "NewHost") {
+  return (
+    <div>
+      <NewHost/>
+    </div>
+  )
 }
-} 
+};
   return (
     
            <div className="user-login">
-        {/* <img src="./yardMeLogo.png" className="App-logo" alt="logo" /> */}
-        {/* <p>
-        Need to make some extra cash this summer? Click here to become a YardMe Host today! 
-        </p>
-        <MDBBtn className='me-1' color='warning'>
-        Host Your Yard!
-      </MDBBtn> */}
-        {/* <a
-          className="App-link"
-          href="./Components/userLogin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         Become a Host!
-        </a> */}
-    
-    
+    {/* changed class from user-header to user login */}
     <MDBContainer fluid className='p-4 user-header overflow-hidden'>
 
       <MDBRow>
@@ -85,11 +76,11 @@ function UserLogin() {
                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember Me' />
               </div>
 
-              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> loggedIn('MyYards')}>Login</MDBBtn>
+              <MDBBtn className='w-100 mb-4' size='md'  type='submit' color='warning' onClick = {()=> setPage('MyYards')}>Login</MDBBtn>
              
               <div className="text-center">
               <p>Need to make some extra cash this summer?</p>
-              <p><a >Click here</a> to become a YardMe Host today!</p>
+              <p><a className='NHost' onClick = {()=> setPage('NewHost')}>Click here</a> to become a YardMe Host today!</p>
               </div>
              
             </MDBCardBody>
@@ -100,8 +91,32 @@ function UserLogin() {
       </MDBRow>
 
     </MDBContainer>
+    {loggedIn()}
     </div>
   );
 }
 
 export default UserLogin;
+
+
+
+
+
+
+
+     {/* <img src="./yardMeLogo.png" className="App-logo" alt="logo" /> */}
+        {/* <p>
+        Need to make some extra cash this summer? Click here to become a YardMe Host today! 
+        </p>
+        <MDBBtn className='me-1' color='warning'>
+        Host Your Yard!
+      </MDBBtn> */}
+        {/* <a
+          className="App-link"
+          href="./Components/userLogin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         Become a Host!
+        </a> */}
+    

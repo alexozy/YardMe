@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import MyYards from './MyYards';
-import HostYard from './HostYard';
+import HostYardListing from './HostYard';
 import UserLogin from './UserLogin';
-import Container from 'react-bootstrap/Container';
-import logo from "../assets/yardMeLogo.png"
+import NewHost from './NewHost';
+// import Container from 'react-bootstrap/Container';
+// import logo from "../assets/yardMeLogo.png"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import {
-  MDBContainer,
-  MDBNavbar,
-  MDBNavbarBrand
-} from 'mdb-react-ui-kit';
+// import {
+//   MDBContainer,
+//   MDBNavbar,
+//   MDBNavbarBrand
+// } from 'mdb-react-ui-kit';
 
 
-// function YardNav() {
+
   function YardNav() {
     const [page, setPage] = useState("userLogin")
         function switchPage () {
@@ -26,7 +27,7 @@ import {
         } else if (page === "HostYard") {
                 return (
             <div>
-                 <HostYard/>
+                 <HostYardListing/>
             </div>
         )
       }
@@ -37,6 +38,13 @@ import {
     </div>
 )
   }
+  else if (page === "NewHost") {
+    return (
+<div>
+     <NewHost/>
+</div>
+)
+}
 };
   
     return (
@@ -45,13 +53,13 @@ import {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link href="#home"><a onClick = {()=> setPage('MyYards')}>MyYards</a></Nav.Link>
-          <Nav.Link href="#link"><a onClick = {()=> setPage('HostYard')}>HostYard</a></Nav.Link>
+          <Nav.Link><a onClick = {()=> setPage('MyYards')}>MyYards</a></Nav.Link>
+          <Nav.Link><a onClick = {()=> setPage('HostYard')}>HostYard</a></Nav.Link>
           <NavDropdown title="Options" id="basic-nav-dropdown">
             {/* <NavDropdown.Item href="#action/3.1">HostYard</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">HostNew</NavDropdown.Item> */}
              {/* <NavDropdown.Item href="#action/3.3">LogIn</NavDropdown.Item> */}
-            <NavDropdown.Item href="#action/3.3"><a onClick = {() => setPage('UserLogin')}>LogOut</a></NavDropdown.Item>
+            <NavDropdown.Item><a onClick = {() => setPage('UserLogin')}>LogOut</a></NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
