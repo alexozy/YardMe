@@ -21,10 +21,12 @@ const UserSchema = new Schema ({
         type: String,
         required: true
     },
+    
     {
         toJSON: {
           virtuals: true,
         },
         id: false,
+    },
 })
-// 
+// signup and login with validators!
