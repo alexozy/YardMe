@@ -67,7 +67,7 @@ function UserLogin() {
 
               <MDBRow>
                 <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='Username' id='form1' type='text'/>
+                  <MDBInput wrapperClass='mb-4' label='Email' id='form1' type='email'/>
                 </MDBCol>
               </MDBRow>
 
