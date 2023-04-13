@@ -8,12 +8,11 @@ import {
   MDBCardBody,
   MDBInput,
   MDBCheckbox,
-  MDBIcon
 }
 from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import MyYards from './MyYards';
+import MyYards from './myYards';
 import NewHost from './NewHost';
 
 
@@ -80,7 +79,7 @@ function UserLogin() {
              
               <div className="text-center">
               <p>Need to make some extra cash this summer?</p>
-              <p><a className='NHost' onClick = {()=> setPage('NewHost')}>Click here</a> to become a YardMe Host today!</p>
+              <p><span className='NHost' onClick = {()=> setPage('NewHost')}>Click here</span> to become a YardMe Host today!</p>
               </div>
              
             </MDBCardBody>
@@ -104,19 +103,4 @@ export default UserLogin;
 
 
 
-     {/* <img src="./yardMeLogo.png" className="App-logo" alt="logo" /> */}
-        {/* <p>
-        Need to make some extra cash this summer? Click here to become a YardMe Host today! 
-        </p>
-        <MDBBtn className='me-1' color='warning'>
-        Host Your Yard!
-      </MDBBtn> */}
-        {/* <a
-          className="App-link"
-          href="./Components/userLogin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         Become a Host!
-        </a> */}
     
