@@ -4,14 +4,16 @@ const yardController = {
 
 
 // CRUD for YARDS"
+// code in yard-routes
 
-// Get All Yards
-//  getAllYards
-// Get Yards By ID
-// Update Yard By ID
+// // getAllYards,
+//   getYardById,
+//   updateYard,
+//   deleteYard,
+// addYard
 
 // Add New Yard (POST ROUTE api/etc....)
-addFollower({ params }, res){
+addYard({ params }, res){
     Yard.findOneAndUpdate(
       { _id: params.yardId },
       { $push: { yards: params.yardId } },

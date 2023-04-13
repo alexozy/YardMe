@@ -1,5 +1,16 @@
 const {User} = require('../models');
 const userController = {
+
+// User-Routes
+  // // getAllUsers,
+//   getUserById,
+//   updateUser,
+//   deleteUser,
+// addNewUser
+
+
+
+
     // GET ALL
     getAllUsers (req, res){
         User.find ({})
