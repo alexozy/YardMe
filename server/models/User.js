@@ -22,11 +22,23 @@ const UserSchema = new Schema ({
         required: true
     },
     
-    {
-        toJSON: {
-          virtuals: true,
-        },
-        id: false,
-    },
+//     {
+//         toJSON: {
+//           virtuals: true,
+//         },
+//         id: false,
+//     },
+
+
+
+
 })
+
+
+
 // signup and login with validators!
+// USER SIGNUP
+// USER LOGIN
+
+// const User = model("User", UserSchema);
+module.exports = User;

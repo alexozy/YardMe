@@ -28,3 +28,4 @@ getUserById ({ params }, res){
       });
   },
 }
+module.exports = userController;
