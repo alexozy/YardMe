@@ -11,11 +11,11 @@ const yardController = {
 // Update Yard By ID
 
 // Add New Yard (POST ROUTE api/etc....)
-addFollower({ params }, res) {
+addFollower({ params }, res){
     Yard.findOneAndUpdate(
       { _id: params.yardId },
       { $push: { yards: params.yardId } },
-      { new: true, runValidators: true }
+      { new: true, }
     )
       .then((dbData) => {
         if (!dbData) {
@@ -25,8 +25,19 @@ addFollower({ params }, res) {
         res.json(dbData);
       })
       .catch((err) => res.json(err));
-  },
+    }
 
  // Delete Yard By ID
+ deleteYard({params}, res) {
+    Yard.findOneAndDelete({_id: params.id})
+    .then((dbData) => {
+        if (!dbData) {
+          res.status(404).json({ message: "No Yard found with this id!" });
+          return;
+        }
+        res.json(dbData);
+      })
+      .catch((err) => res.status(400).json(err));
+  }
 
- module.exports = yardController
+ module.exports = yardController;
