@@ -7,6 +7,7 @@ const userController = {
 //   updateUser,
 //   deleteUser,
 // addNewUser
+// loginUser
 
 
 
