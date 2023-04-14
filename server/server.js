@@ -3,9 +3,13 @@ const mongoose = require('mongoose');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+// middleware
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: true }));
+// if
+if(process.en)
+
 
 app.use(require('./routes'));
 
