@@ -7,15 +7,13 @@ import {
   MDBCard,
   MDBCardBody,
   MDBInput,
-  MDBCheckbox,
-  MDBIcon
 }
 from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import MyYards from './MyYards';
-import UserLogin from './UserLogin';
-import HostYardListing from './HostYard';
+import MyYards from './myYards';
+import UserLogin from './userLogin';
+import HostYardListing from './hostYard';
 
 
 function NewHost() {

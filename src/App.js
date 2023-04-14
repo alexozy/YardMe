@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Footer from "./Components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -9,7 +9,7 @@ import {
 } from 'mdb-react-ui-kit';
 
 import './App.css';
-import UserLogin from './Components/UserLogin';
+import UserLogin from './Components/userLogin';
 import YardNav from './Components/Nav';
 import MyYards from './Components/MyYards';
 
