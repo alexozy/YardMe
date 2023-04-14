@@ -14,7 +14,7 @@ import '../App.css';
 
 
 
-function NewHost() {
+function NewHost({setIsLoggedIn}) {
 
   return (
     
@@ -51,7 +51,7 @@ function NewHost() {
               <MDBInput wrapperClass='mb-4' label='Password' id='form3' type='password'/>
           
 
-              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setPage('MyYards')}
+              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setIsLoggedIn(true)}
               //make function that if there are no yard it displays 'You have no yards yet' 
               >Create Account</MDBBtn>
         
