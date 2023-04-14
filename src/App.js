@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Footer from "./Components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -7,20 +7,23 @@ import Navbar from 'react-bootstrap/Navbar';
 import {
   MDBNavbarBrand
 } from 'mdb-react-ui-kit';
-
 import './App.css';
-import UserLogin from './Components/userLogin';
+import UserLogin from './Components/UserLogin';
 import YardNav from './Components/Nav';
+import Yard from './Components/Yard';
+import NewHost from './Components/NewHost';
 
 function App() {
-  // const [selectedTab, setSelectedTab] = useState("")
+  const [page, setPage] = useState("MyYards")
+   const [isLoggedIn, setIsLoggedIn] = useState(false);
+   const [addHost, setAddHost] = useState(false);
+
   return (
     <div className="App">
           <div>
-      {/* <header> */}
+
       <Navbar bg="light" expand="lg">
       <Container>
-      {/* navbar logo code for image import */}
         <MDBNavbarBrand href='#'>
             <img
               src={logo}
@@ -31,21 +34,24 @@ function App() {
           </MDBNavbarBrand>
 
         <Navbar.Brand href="#home">YardMe:Host </Navbar.Brand>
-       {YardNav()}
+       <div>
+
+        {isLoggedIn ? <YardNav setPage={setPage} setIsLoggedIn={setIsLoggedIn}/>: null}
+        </div>
+        
       </Container>
     </Navbar>
-    {/* </header> */}
   
     </div>
       
-      {/* <Nav setSelectedTab={setSelectedTab}></Nav> */}
-      {/* <main> */}
-      {/* {selectedTab==='myYards'&& < myYards />}
-      {selectedTab==='hostYards'&& <hostYards/>} */}
-      {/* </main> */}
-      {UserLogin()}
+    
+      <div>
+        {!isLoggedIn ? (
+            !addHost ? <UserLogin setIsLoggedIn={setIsLoggedIn} setAddHost={setAddHost}/> : <NewHost setIsLoggedIn={setIsLoggedIn} setAddHost={setAddHost}/> 
+         ) : <Yard page={page}/>}
+      </div>
 
-      {Footer()}
+     <Footer/>
     </div>
   );
 }

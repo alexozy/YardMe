@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   MDBBtn,
   MDBContainer,
@@ -11,40 +11,11 @@ import {
 from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import MyYards from './myYards';
-import UserLogin from './userLogin';
-import HostYardListing from './hostYard';
+
 
 
 function NewHost() {
-  const [page, setPage] = useState("NewHost")
-  function Create() {
-    if (page === "NewHost") {
-      return (
-  <div>
-       <NewHost/>
-  </div>
-)
-} else if (page === "MyYards") {
-    return (
-        <div>
-            <MyYards/>
-        </div>
-    )
-} else if (page === "UserLogin") {
-    return (
-        <div>
-            <UserLogin/>
-        </div>
-    )
-} else if (page === "HostYard") {
-    return (
-        <div>
-            <HostYardListing/>
-        </div>
-    )
-}
-} 
+
   return (
     
            <div className="user-login">
@@ -83,7 +54,7 @@ function NewHost() {
               <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setPage('MyYards')}
               //make function that if there are no yard it displays 'You have no yards yet' 
               >Create Account</MDBBtn>
-              {/* <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setPage('HostYard')}>Add Yard</MDBBtn> */}
+        
              
               <div className="text-center">
              
@@ -97,7 +68,6 @@ function NewHost() {
       </MDBRow>
 
     </MDBContainer>
-    {Create()}
     </div>
   );
 }

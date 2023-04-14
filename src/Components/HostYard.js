@@ -3,14 +3,14 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-
+//test test
 function HostYardListing() {
   return (
-
+    <div>
     <Form>
     <Row className="mb-3">
       <Form.Group as={Col} controlId="formGridEmail">
-        <Form.Label>Name Your Yard!</Form.Label>
+        <Form.Label>Name Your Yard !</Form.Label>
         <Form.Control type="email" placeholder="i.e. Frolic Farm" />
       </Form.Group>
 
@@ -62,6 +62,7 @@ function HostYardListing() {
       Create!
     </Button>
   </Form>
+  </div>
   );
 }
 

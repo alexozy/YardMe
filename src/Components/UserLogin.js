@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   MDBBtn,
   MDBContainer,
@@ -12,31 +12,15 @@ import {
 from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import MyYards from './myYards';
-import NewHost from './NewHost';
 
 
-function UserLogin() {
-  const [page, setPage] = useState("userLogin")
-  function loggedIn() {
-    if (page === "MyYards") {
-      return (
-  <div>
-       <MyYards/>
-  </div>
-)
-} else if (page === "NewHost") {
-  return (
-    <div>
-      <NewHost/>
-    </div>
-  )
-}
-};
+function UserLogin({setIsLoggedIn, setAddHost}) {
+
+
   return (
     
            <div className="user-login">
-    {/* changed class from user-header to user login */}
+    {/* changed class from user-header to User login */}
     <MDBContainer fluid className='p-4 user-header overflow-hidden'>
 
       <MDBRow>
@@ -75,11 +59,11 @@ function UserLogin() {
                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember Me' />
               </div>
 
-              <MDBBtn className='w-100 mb-4' size='md'  type='submit' color='warning' onClick = {()=> setPage('MyYards')}>Login</MDBBtn>
+              <MDBBtn className='w-100 mb-4' size='md'  type='submit' color='warning' onClick = {()=> setIsLoggedIn(true)}>Login</MDBBtn>
              
               <div className="text-center">
               <p>Need to make some extra cash this summer?</p>
-              <p><span className='NHost' onClick = {()=> setPage('NewHost')}>Click here</span> to become a YardMe Host today!</p>
+              <p><button className='NHost' onClick = {()=> setAddHost(true)}>Click here</button> to become a YardMe Host today!</p>
               </div>
              
             </MDBCardBody>
@@ -90,7 +74,6 @@ function UserLogin() {
       </MDBRow>
 
     </MDBContainer>
-    {loggedIn()}
     </div>
   );
 }
