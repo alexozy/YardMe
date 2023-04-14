@@ -83,7 +83,7 @@ function NewHost() {
               <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setPage('MyYards')}
               //make function that if there are no yard it displays 'You have no yards yet' 
               >Create Account</MDBBtn>
-              {/* <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setPage('HostYard')}>Add Yard</MDBBtn> */}
+              {/* <MDBBtn className='w-100 mb-4' size='md'   color='warning' onClick = {()=> setPage('HostYard')}>Add Yard</MDBBtn> */}
              
               <div className="text-center">
              

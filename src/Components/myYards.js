@@ -7,7 +7,7 @@ import {
 from 'mdb-react-ui-kit';
 import '../App.css';
 // the listings will display here!
-// this is a 3 equal section grid; the yard cards will stack equally across.
+// this is a 3 equal section grid;  the yard cards will stack equally across.
 function MyYards() {
   return (
     <div> 
@@ -26,17 +26,39 @@ function MyYards() {
         <ListGroup.Item>Water? Yes or No</ListGroup.Item>
         <ListGroup.Item><MDBBtn className='w-30 mb-4 cardbtns' size='sm'  type='delete' color='warning'>Delete</MDBBtn><MDBBtn className='w-30 mb-4' size='sm'  type='delete' color='warning'>Edit  </MDBBtn></ListGroup.Item>
       </ListGroup>
-      {/* <Card.Body>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
-      </Card.Body> */}
     </Card>
       </MDBCol>
       <MDBCol md='4'>
-        Box middle
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
+      <Card.Body>
+        <Card.Title>Yard Name</Card.Title>
+        <Card.Text>
+         This is a quick description of the yard.
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>City</ListGroup.Item>
+        <ListGroup.Item>Water? Yes or No</ListGroup.Item>
+        <ListGroup.Item><MDBBtn className='w-30 mb-4 cardbtns' size='sm'  type='delete' color='warning'>Delete</MDBBtn><MDBBtn className='w-30 mb-4' size='sm'  type='delete' color='warning'>Edit  </MDBBtn></ListGroup.Item>
+      </ListGroup>
+    </Card>
       </MDBCol>
       <MDBCol md='4'>
-        Box 3
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
+      <Card.Body>
+        <Card.Title>Yard Name</Card.Title>
+        <Card.Text>
+         This is a quick description of the yard.
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>City</ListGroup.Item>
+        <ListGroup.Item>Water? Yes or No</ListGroup.Item>
+        <ListGroup.Item><MDBBtn className='w-30 mb-4 cardbtns' size='sm'  type='delete' color='warning'>Delete</MDBBtn><MDBBtn className='w-30 mb-4' size='sm'  type='delete' color='warning'>Edit  </MDBBtn></ListGroup.Item>
+      </ListGroup>
+    </Card>
       </MDBCol>
     </MDBRow>
 
@@ -44,13 +66,52 @@ function MyYards() {
 
     <MDBRow>
       <MDBCol md='4'>
-        Box 1
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
+      <Card.Body>
+        <Card.Title>Yard Name</Card.Title>
+        <Card.Text>
+         This is a quick description of the yard.
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>City</ListGroup.Item>
+        <ListGroup.Item>Water? Yes or No</ListGroup.Item>
+        <ListGroup.Item><MDBBtn className='w-30 mb-4 cardbtns' size='sm'  type='delete' color='warning'>Delete</MDBBtn><MDBBtn className='w-30 mb-4' size='sm'  type='delete' color='warning'>Edit  </MDBBtn></ListGroup.Item>
+      </ListGroup>
+    </Card>
       </MDBCol>
       <MDBCol md='4'>
-        Box middle
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
+      <Card.Body>
+        <Card.Title>Yard Name</Card.Title>
+        <Card.Text>
+         This is a quick description of the yard.
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>City</ListGroup.Item>
+        <ListGroup.Item>Water? Yes or No</ListGroup.Item>
+        <ListGroup.Item><MDBBtn className='w-30 mb-4 cardbtns' size='sm'  type='delete' color='warning'>Delete</MDBBtn><MDBBtn className='w-30 mb-4' size='sm'  type='delete' color='warning'>Edit  </MDBBtn></ListGroup.Item>
+      </ListGroup>
+    </Card>
       </MDBCol>
       <MDBCol md='4'>
-        Box 3
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
+      <Card.Body>
+        <Card.Title>Yard Name</Card.Title>
+        <Card.Text>
+         This is a quick description of the yard.
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>City</ListGroup.Item>
+        <ListGroup.Item>Water? Yes or No</ListGroup.Item>
+        <ListGroup.Item><MDBBtn className='w-30 mb-4 cardbtns' size='sm'  type='delete' color='warning'>Delete</MDBBtn><MDBBtn className='w-30 mb-4' size='sm'  type='delete' color='warning'>Edit  </MDBBtn></ListGroup.Item>
+      </ListGroup>
+    </Card>
       </MDBCol>
     </MDBRow>
 

@@ -49,21 +49,20 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
   
     return (
       <div> 
-        <div>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link><span onClick = {()=> setPage('MyYards')}>MyYards</span></Nav.Link>
           <Nav.Link><span onClick = {()=> setPage('HostYard')}>HostYard</span></Nav.Link>
+
           <NavDropdown title="Options" id="basic-nav-dropdown">
             {/* <NavDropdown.Item href="#action/3.1">HostYard</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">HostNew</NavDropdown.Item> */}
+            <NavDropdown.Item  href="#action/3.2">HostNew</NavDropdown.Item> */}
              {/* <NavDropdown.Item href="#action/3.3">LogIn</NavDropdown.Item> */}
             <NavDropdown.Item><span onClick = {() => setPage('UserLogin')}>LogOut</span></NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
-      </div>
       {switchPage()}
       </div>
     )
