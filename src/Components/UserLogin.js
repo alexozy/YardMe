@@ -16,23 +16,18 @@ import MyYards from './MyYards';
 import NewHost from './NewHost';
 //updated files
 
-function UserLogin() {
-  const [page, setPage] = useState("userLogin")
-  function loggedIn() {
-    if (page === "MyYards") {
-      return (
-  <div>
-       <MyYards/>
-  </div>
-)
-} else if (page === "NewHost") {
-  return (
-    <div>
-      <NewHost/>
-    </div>
-  )
-}
-};
+function UserLogin({setIsLoggedIn, setAddHost}) {
+//   const [page, setPage] = useState("userLogin")
+//   function loggedIn() {
+//  if (page === "NewHost") {
+//   return (
+//     <div>
+//       <NewHost/>
+//     </div>
+//   )
+// }
+// };
+
   return (
     
            <div className="user-login">
@@ -75,11 +70,11 @@ function UserLogin() {
                 <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember Me' />
               </div>
 
-              <MDBBtn className='w-100 mb-4' size='md'  type='submit' color='warning' onClick = {()=> setPage('MyYards')}>Login</MDBBtn>
+              <MDBBtn className='w-100 mb-4' size='md'  type='submit' color='warning' onClick = {()=> setIsLoggedIn(true)}>Login</MDBBtn>
              
               <div className="text-center">
               <p>Need to make some extra cash this summer?</p>
-              <p><span className='NHost' onClick = {()=> setPage('NewHost')}>Click here</span> to become a YardMe Host today!</p>
+              <p><button className='NHost' onClick = {()=> setAddHost(true)}>Click here</button> to become a YardMe Host today!</p>
               </div>
              
             </MDBCardBody>
@@ -90,7 +85,7 @@ function UserLogin() {
       </MDBRow>
 
     </MDBContainer>
-    {loggedIn()}
+    {/* {loggedIn()} */}
     </div>
   );
 }

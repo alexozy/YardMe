@@ -17,34 +17,34 @@ import HostYardListing from './HostYard';
 
 
 function NewHost() {
-  const [page, setPage] = useState("NewHost")
-  function Create() {
-    if (page === "NewHost") {
-      return (
-  <div>
-       <NewHost/>
-  </div>
-)
-} else if (page === "MyYards") {
-    return (
-        <div>
-            <MyYards/>
-        </div>
-    )
-} else if (page === "UserLogin") {
-    return (
-        <div>
-            <UserLogin/>
-        </div>
-    )
-} else if (page === "HostYard") {
-    return (
-        <div>
-            <HostYardListing/>
-        </div>
-    )
-}
-} 
+//   const [page, setPage] = useState("NewHost")
+//   function Create() {
+//     if (page === "NewHost") {
+//       return (
+//   <div>
+//        <NewHost/>
+//   </div>
+// )
+// } else if (page === "MyYards") {
+//     return (
+//         <div>
+//             <MyYards/>
+//         </div>
+//     )
+// } else if (page === "UserLogin") {
+//     return (
+//         <div>
+//             <UserLogin/>
+//         </div>
+//     )
+// } else if (page === "HostYard") {
+//     return (
+//         <div>
+//             <HostYardListing/>
+//         </div>
+//     )
+// }
+// } 
   return (
     
            <div className="user-login">
@@ -97,7 +97,7 @@ function NewHost() {
       </MDBRow>
 
     </MDBContainer>
-    {Create()}
+    {/* {Create()} */}
     </div>
   );
 }

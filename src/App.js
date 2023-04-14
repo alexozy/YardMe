@@ -12,10 +12,13 @@ import './App.css';
 import UserLogin from './Components/UserLogin';
 import YardNav from './Components/Nav';
 import MyYards from './Components/MyYards';
+import Yard from './Components/Yard';
+import NewHost from './Components/NewHost';
 
 function App() {
- 
-  const isLoggedIn = useState(0);
+  const [page, setPage] = useState("MyYards")
+   const [isLoggedIn, setIsLoggedIn] = useState(false);
+   const [addHost, setAddHost] = useState(false);
   // const [selectedTab, setSelectedTab] = useState("")
   return (
     <div className="App">
@@ -35,7 +38,8 @@ function App() {
 
         <Navbar.Brand href="#home">YardMe:Host </Navbar.Brand>
        <div>
-        {!isLoggedIn ? YardNav() : null}
+
+        {isLoggedIn ? <YardNav setPage={setPage} setIsLoggedIn={setIsLoggedIn}/>: null}
         </div>
         
       </Container>
@@ -44,16 +48,14 @@ function App() {
   
     </div>
       
-      {/* <Nav setSelectedTab={setSelectedTab}></Nav> */}
-      {/* <main> */}
-      {/* {selectedTab==='myYards'&& < myYards />}
-      {selectedTab==='hostYards'&& <hostYards/>} */}
-      {/* </main> */}
+    
       <div>
-        {!isLoggedIn ? MyYards() : UserLogin()}
-        </div>
+        {!isLoggedIn ? (
+            !addHost ? <UserLogin setIsLoggedIn={setIsLoggedIn} setAddHost={setAddHost}/> : <NewHost setIsLoggedIn={setIsLoggedIn} setAddHost={setAddHost}/> 
+         ) : <Yard page={page}/>}
+      </div>
 
-      {Footer()}
+     <Footer/>
     </div>
   );
 }
