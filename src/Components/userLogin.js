@@ -12,9 +12,9 @@ import {
 from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import MyYards from './myYards';
+import MyYards from './MyYards';
 import NewHost from './NewHost';
-
+//updated files
 
 function UserLogin() {
   const [page, setPage] = useState("userLogin")
@@ -36,7 +36,7 @@ function UserLogin() {
   return (
     
            <div className="user-login">
-    {/* changed class from user-header to user login */}
+    {/* changed class from user-header to User login */}
     <MDBContainer fluid className='p-4 user-header overflow-hidden'>
 
       <MDBRow>

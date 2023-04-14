@@ -11,9 +11,9 @@ import {
 from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
-import MyYards from './myYards';
-import UserLogin from './userLogin';
-import HostYardListing from './hostYard';
+import MyYards from './MyYards';
+import UserLogin from './UserLogin';
+import HostYardListing from './HostYard';
 
 
 function NewHost() {
@@ -83,7 +83,7 @@ function NewHost() {
               <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setPage('MyYards')}
               //make function that if there are no yard it displays 'You have no yards yet' 
               >Create Account</MDBBtn>
-              {/* <MDBBtn className='w-100 mb-4' size='md'   color='warning' onClick = {()=> setPage('HostYard')}>Add Yard</MDBBtn> */}
+              {/* <MDBBtn className='w-100 mb-4' size='md'   ccolor='warning' onClick = {()=> setPage('HostYard')}>Add Yard</MDBBtn> */}
              
               <div className="text-center">
              

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import MyYards from './myYards';
-import HostYardListing from './hostYard';
-import UserLogin from './userLogin.js';
+import MyYards from './MyYards';
+import HostYardListing from './HostYard';
+import UserLogin from './UserLogin.js';
 import NewHost from './NewHost';
 // import Container from 'react-bootstrap/Container';
 // import logo from "../assets/yardMeLogo.png"
