@@ -11,8 +11,11 @@ import {
 import './App.css';
 import UserLogin from './Components/UserLogin';
 import YardNav from './Components/Nav';
+import MyYards from './Components/MyYards';
 
 function App() {
+ 
+  const isLoggedIn = useState(0);
   // const [selectedTab, setSelectedTab] = useState("")
   return (
     <div className="App">
@@ -31,7 +34,10 @@ function App() {
           </MDBNavbarBrand>
 
         <Navbar.Brand href="#home">YardMe:Host </Navbar.Brand>
-       {YardNav()}
+       <div>
+        {!isLoggedIn ? YardNav() : null}
+        </div>
+        
       </Container>
     </Navbar>
     {/* </header> */}
@@ -43,7 +49,9 @@ function App() {
       {/* {selectedTab==='myYards'&& < myYards />}
       {selectedTab==='hostYards'&& <hostYards/>} */}
       {/* </main> */}
-      {UserLogin()}
+      <div>
+        {!isLoggedIn ? MyYards() : UserLogin()}
+        </div>
 
       {Footer()}
     </div>
