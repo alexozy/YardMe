@@ -106,7 +106,7 @@ export default UserLogin;
 
      {/* <img src="./yardMeLogo.png" className="App-logo" alt="logo" /> */}
         {/* <p>
-        Need to make some extra cash this summer? Click here to become a YardMe Host today! 
+        Need to make some extra cash this summer? Click  here to become a YardMe Host today! 
         </p>
         <MDBBtn className='me-1' color='warning'>
         Host Your Yard!

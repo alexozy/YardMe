@@ -7,7 +7,7 @@ import {
 from 'mdb-react-ui-kit';
 import '../App.css';
 // the listings will display here!
-// this is a 3 equal section grid; the yard cards will stack equally across.
+// this is a 3 equal section grid;  the yard cards will stack equally across.
 function MyYards() {
   return (
     <div> 

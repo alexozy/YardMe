@@ -10,7 +10,7 @@ function HostYardListing() {
     <Form>
     <Row className="mb-3">
       <Form.Group as={Col} controlId="formGridEmail">
-        <Form.Label>Name Your Yard!</Form.Label>
+        <Form.Label>Name Your Yard !</Form.Label>
         <Form.Control type="email" placeholder="i.e. Frolic Farm" />
       </Form.Group>
 

@@ -52,11 +52,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
-          <Nav.Link><a onClick = {()=> setPage('MyYards')}>MyYards</a></Nav.Link>
+          <Nav.Link><a onClick = {()=> setPage('MyYards')}>MyYards </a></Nav.Link>
           <Nav.Link><a onClick = {()=> setPage('HostYard')}>HostYard</a></Nav.Link>
           <NavDropdown title="Options" id="basic-nav-dropdown">
             {/* <NavDropdown.Item href="#action/3.1">HostYard</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">HostNew</NavDropdown.Item> */}
+            <NavDropdown.Item  href="#action/3.2">HostNew</NavDropdown.Item> */}
              {/* <NavDropdown.Item href="#action/3.3">LogIn</NavDropdown.Item> */}
             <NavDropdown.Item><a onClick = {() => setPage('UserLogin')}>LogOut</a></NavDropdown.Item>
           </NavDropdown>
