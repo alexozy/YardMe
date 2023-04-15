@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -7,8 +8,6 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
-// if
-if(process.en)
 
 
 app.use(require('./routes'));
