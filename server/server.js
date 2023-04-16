@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(require('./routes'));
 
 // communicate which database to connect to
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/YardMe', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/YardMe', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
