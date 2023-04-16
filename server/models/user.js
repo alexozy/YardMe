@@ -26,12 +26,16 @@ const UserSchema = new Schema ({
         required: true
     },
     // set userYards to be an array of data that adheres to the YardSchema
-    userYards: [YardSchema],
-
+    userYards: [{
+      type: Schema.Types.ObjectId,
+      ref: "Yard",
+    }],
+  },
+  {
     toJSON: {
           virtuals: true,
         },
-        id: false,
+          id: false,
 });
 
 // static signup method

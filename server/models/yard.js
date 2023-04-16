@@ -14,6 +14,8 @@ const YardSchema = new Schema ({
         unique: true,
         required: true,
     },
+},
+{
     toJSON: {
           virtuals: true,
         },

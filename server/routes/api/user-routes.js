@@ -11,7 +11,7 @@ const {
   const {
     createUser,
     loginUser,
-  } = require ('../../controllers/signing-controller');
+  } = require ('../../controllers/signin-controllers');
   
 
   router

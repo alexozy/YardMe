@@ -14,6 +14,7 @@ const userController = {
   //Get a user by ID (GET /api/users/:id)
   getUserById({ params }, res) {
     User.findOne({ _id: params.id })
+      .populate("userYards")
       .then((dbData) => {
         // If no User is found, send 404
         if (!dbData) {
