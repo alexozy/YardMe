@@ -87,8 +87,9 @@ function UserLogin({setIsLoggedIn, setAddHost}) {
                onClick = {()=> setIsLoggedIn(true)}>Login</MDBBtn>
              
               <div className="text-center">
-              <p>Need to make some extra cash this summer?</p>
-              <p><button className='NHost' onClick = {()=> setAddHost(true)}>Click here</button> to become a YardMe Host today!</p>
+              {/* <p>Need to make some extra cash this summer?</p> */}
+              <button className='NHost' onClick = {()=> setAddHost(true)}>Not yet a host? Register here.</button>
+              {/*  */}
               </div>
              
             </MDBCardBody>

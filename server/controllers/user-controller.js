@@ -3,8 +3,8 @@ const { User } = require("../models");
 const userController = {
   //get all users (GET /api/users)
   getAllUsers(req, res) {
-    User.find({})
-      .then((dbData) => res.json(dbData))
+    User.find()
+      .then((users) => res.json(users))
       .catch((err) => {
         console.log(err);
         res.status(400).json(err);

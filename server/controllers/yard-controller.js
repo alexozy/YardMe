@@ -1,10 +1,10 @@
 const {Yard} = require('../models')
 
 const yardController = {
- //get all users (GET /api/users)
+ //get all users (GET /api/yards)
  getAllYards (req, res){
-    Yard.find ({})
-    .then((dbData) => res.json(dbData))
+    Yard.find ()
+    .then((yard) => res.json(yard))
     .catch((err) => {
         console.log(err);
         res.status(400).json(err);

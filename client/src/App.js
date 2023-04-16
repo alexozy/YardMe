@@ -13,12 +13,13 @@ import YardNav from './Components/Nav';
 import Yard from './Components/Yard';
 import NewHost from './Components/NewHost';
 import HostYardListing from './Components/HostYard';
+import MyYards from './Components/MyYards';
 
 function App() {
   const [page, setPage] = useState("MyYards")
    const [isLoggedIn, setIsLoggedIn] = useState(false);
    const [addHost, setAddHost] = useState(false);
-   const [newYard, setNewYard] = useState(HostYardListing);
+   const [newYard, setNewYard] = useState("HostYardListing");
 
   return (
     <div className="App">
@@ -45,7 +46,7 @@ function App() {
     </Navbar>
   
     </div>
-      
+    
     
       <div>
      

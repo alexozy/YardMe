@@ -12,7 +12,8 @@ from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import HostYardListing from './HostYard';
-
+import { Button } from 'bootstrap';
+import App from '../App';
 
 
 function NewHost({setIsLoggedIn, setPage}) {
@@ -42,7 +43,8 @@ function NewHost({setIsLoggedIn, setPage}) {
         <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
 
           <h1 className="my-5 display-3 fw-bold ls-tight px-3" style={{color: 'hsl(218, 81%, 95%)'}}>
-            Create New Host Account</h1>
+            Ready to make some extra cash this summer?
+            <span className="my-5 display-3 fw-bold ls-tight px-3" style={{color: 'hsl(218, 81%, 75%)'}}> Create New Host Account now!</span></h1> 
 
 
         </MDBCol>
@@ -64,12 +66,14 @@ function NewHost({setIsLoggedIn, setPage}) {
               <MDBInput wrapperClass='mb-4' value={email} onChange={(e) => setEmail(e.target.value)} label='Email' id='newEmail' type='email'/>
               <MDBInput wrapperClass='mb-4' value={pass} onChange={(e) => setPass(e.target.value)} label='Password' id='newPass' type='password'/>
           
-              {isLoggedOut ? <HostYardListing setPage={setPage} setIsLoggedOut={setIsLoggedOut}/>: null}
+              {/* {!isLoggedOut ? <HostYardListing setPage={setPage}
+               setIsLoggedOut={setIsLoggedOut}/>
+                : null} */}
 
-              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setIsLoggedIn(true)}
+              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setPage('MyYards')}
               //make function that if there are no yard it displays 'You have no yards yet' 
               >Create Account</MDBBtn>
-        
+            {/* <MDBBtn onClick = {()=> setIsLoggedIn(false)}>Already a host? Login here.</MDBBtn> */}
              
               <div className="text-center">
              
