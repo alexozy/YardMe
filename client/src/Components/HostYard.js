@@ -1,20 +1,23 @@
+import React, {useState} from 'react';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import MyYards from './MyYards';
 //test test
-function HostYardListing() {
+function HostYardListing(setYards, setIsLoggedIn, setPage, ) {
+  const [newYard, setNewYard] = useState("HostYardListing");
   return (
     <div>
     <Form>
     <Row className="mb-3">
-      <Form.Group as={Col} controlId="formGridEmail">
+      <Form.Group as={Col} controlId="formGridName">
         <Form.Label>Name Your Yard !</Form.Label>
-        <Form.Control type="text" placeholder="i.e. Frolic Farm" />
+        <Form.Control type="text" placeholder="i.e. Frolick Farm" />
       </Form.Group>
 
-      <Form.Group as={Col} controlId="formGridPassword">
+      <Form.Group as={Col} controlId="formGridCost">
         <Form.Label>Hourly Cost</Form.Label>
         <Form.Control type="number" placeholder="Enter Dollar Amount Only" />
       </Form.Group>
@@ -35,7 +38,7 @@ function HostYardListing() {
         <Form.Label>City</Form.Label>
         <Form.Control />
       </Form.Group>
-      <Form.Group as={Col} controlId="formGridCity">
+      <Form.Group as={Col} controlId="formGridState">
         <Form.Label> State </Form.Label>
         <Form.Control />
       </Form.Group>
@@ -57,8 +60,12 @@ function HostYardListing() {
         <option value="5">None/Other</option>
       </Form.Select>
     </FloatingLabel>
-
-    <Button variant="success" type="submit">
+    <div>
+    {/* <div>
+        {newYard ? <HostYardListing  setNewYard={setNewYard} />: null}
+      </div> */}
+    </div>
+    <Button variant="success" type="submit"  onClick = {()=> setPage('MyYards')}>
       Create!
     </Button>
   </Form>

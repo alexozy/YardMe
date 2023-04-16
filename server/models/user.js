@@ -107,10 +107,6 @@ UserSchema.pre('save', async function (next) {
     return bcrypt.compare(password, this.password);
   };
   
-  // when we query a user, we'll also get another field called `yards` with the number of yards we have
-  UserSchema.virtual('yards').get(function () {
-    return this.savedYards.length;
-  });
-
+ 
 const User = model("User", UserSchema);
 module.exports = User;
