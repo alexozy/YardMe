@@ -1,6 +1,6 @@
 // schema import here
 const {Schema, model} = require ('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const validator = require('validator')
 
 // import schema from yard.js
