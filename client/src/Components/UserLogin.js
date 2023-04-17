@@ -12,14 +12,17 @@ import {
 from 'mdb-react-ui-kit';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
+// import { useFormContext } from 'react-hook-form';
+// import { useContext } from "react";
 
-
-function UserLogin({setIsLoggedIn, setAddHost}) {
+function UserLogin({setIsLoggedIn, setAddHost, setPage}) {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
+  // const { register } = useFormContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     fetch('/api/user', {
       method: "POST",
       headers: {
@@ -33,6 +36,7 @@ function UserLogin({setIsLoggedIn, setAddHost}) {
     ).then(
       function(data) {
         console.log(data);
+     
     // redirect to main page
       }
     )
@@ -67,28 +71,50 @@ function UserLogin({setIsLoggedIn, setAddHost}) {
           <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
 
 
-          <form onSubmit={handleSubmit}>
+          <form 
+          onSubmit={handleSubmit}
+          >
           <MDBCard className='my-5 bg-glass'>
             <MDBCardBody className='p-5'>
 
               <MDBRow>
                 <MDBCol col='6'>
                   
-                  <MDBInput wrapperClass='mb-4' value={email} onChange={(e) => setEmail(e.target.value)} label='Email' id='form1 email' type='email'/>
+                  <MDBInput wrapperClass='mb-4' value={email} onChange={(e) => setEmail(e.target.value)} label='Email' id='form1 email' type='email' 
+        //    {...register(email, {
+        //   required: {
+        //     value: true,
+        //     message: 'required',
+        //   },
+        // })}
+        />
                 </MDBCol>
               </MDBRow>
 
-              <MDBInput wrapperClass='mb-4' value={pass} onChange={(e) => setPass(e.target.value)} label='Password' id='form3 password' type='password'/>
+              <MDBInput wrapperClass='mb-4' value={pass} onChange={(e) => setPass(e.target.value)} label='Password' id='form3 password' type='password'  
+        //        {...register(pass, {
+        //   required: {
+        //     value: true,
+        //     message: 'required',
+        //   },
+        // })}
+        />
               <div className='d-flex justify-content-center mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember Me' />
+                <MDBCheckbox className='form-check-label' name='flexCheck' value='' id='flexCheckDefault'/> 
+                <label><small>Remember Me</small></label>
+                 
               </div>
 
-              <MDBBtn className='w-100 mb-4' size='md'  type='submit' color='warning'
-               onClick = {()=> setIsLoggedIn(true)}>Login</MDBBtn>
+              <MDBBtn className='w-100 mb-4' size='md'  type='button' color='warning'
+               onClick = {() => setIsLoggedIn(true)}
+              onSubmit={handleSubmit}
+               >Login</MDBBtn>
              
               <div className="text-center">
               {/* <p>Need to make some extra cash this summer?</p> */}
-              <button className='NHost' onClick = {()=> setAddHost(true)}>Not yet a host? Register here.</button>
+              <button className='NHost btn btn-link' 
+              onClick = {()=> setAddHost(true)}
+              >Not yet a host? Register here.</button>
               {/*  */}
               </div>
              

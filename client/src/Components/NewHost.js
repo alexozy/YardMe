@@ -16,7 +16,7 @@ import { Button } from 'bootstrap';
 import App from '../App';
 
 
-function NewHost({setIsLoggedIn, setPage}) {
+function NewHost({setIsLoggedIn}) {
   const [email, setEmail] = useState('');
   const [pass, setPass] = useState('');
   const [name, setName] = useState('');
@@ -70,10 +70,10 @@ function NewHost({setIsLoggedIn, setPage}) {
                setIsLoggedOut={setIsLoggedOut}/>
                 : null} */}
 
-              <MDBBtn className='w-100 mb-4' size='md'  color='warning' onClick = {()=> setPage('MyYards')}
-              //make function that if there are no yard it displays 'You have no yards yet' 
-              >Create Account</MDBBtn>
-            {/* <MDBBtn onClick = {()=> setIsLoggedIn(false)}>Already a host? Login here.</MDBBtn> */}
+              <MDBBtn className='w-100 mb-4' size='md' color='warning' onClick = {()=> setIsLoggedIn(true)}>Create Account</MDBBtn>
+              {/* make function that if there are no yard it displays 'You have no yards yet'  */}
+          
+            {/* <MDBBtn className="btn btn-link" onClick = {()=> setIsLoggedIn(false)}>Already a host? Login here.</MDBBtn> */}
              
               <div className="text-center">
              
