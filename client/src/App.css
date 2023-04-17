@@ -40,6 +40,22 @@
   font-size: calc(10px + 2vmin);
   color: #282c34;
 }
+.new-host-form {
+  width: 100%;
+  padding: 75px;
+  
+}
+
+#create-yard {
+  margin-top: 50px;
+}
+
+.yardCard {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+}
 
 .App-link {
   color: #61dafb;

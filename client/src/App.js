@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Footer from "./Components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -20,6 +20,13 @@ function App() {
    const [isLoggedIn, setIsLoggedIn] = useState(false);
    const [addHost, setAddHost] = useState(false);
    const [newYard, setNewYard] = useState("HostYardListing");
+   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:3000/message")
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
+  }, []);
 
   return (
     <div className="App">

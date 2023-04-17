@@ -9,7 +9,7 @@ const YardSchema = require('./yard');
 // UserSchema
 const UserSchema = new Schema ({
     // username
-    username:{
+    name:{
         type: String,
         unique: true,
         required: true,
@@ -39,10 +39,10 @@ const UserSchema = new Schema ({
 });
 
 // static signup method
-UserSchema.statics.signup = async function(email, username, password) {
+UserSchema.statics.signup = async function(email, name, password) {
 
   // validation
-  if (!email || !username || !password) {
+  if (!email || !name || !password) {
     throw Error('All fields must be filled')
   }
   if (!validator.isEmail(email)) {
@@ -56,16 +56,16 @@ UserSchema.statics.signup = async function(email, username, password) {
     throw Error('Email already in use')
   }
 
-  const existsUsername = await this.findOne({ username })
+  // const existsUsername = await this.findOne({ name })
 
-  if (existsUsername) {
-    throw Error('Username already in use')
-  }
+  // if (existsUsername) {
+  //   throw Error('Username already in use')
+  // }
 
   const salt = await bcrypt.genSalt(10)
   const hash = await bcrypt.hash(password, salt)
 
-  const user = await this.create({ email, username, password: hash })
+  const user = await this.create({ email, name, password: hash })
 
   return user
 }

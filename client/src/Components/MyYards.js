@@ -27,7 +27,7 @@ function MyYards() {
   //     <MDBRow>
   //       {yards.map(yard=>(
   //         <MDBCol md='4'>
-  //         <Card style={{ width: '18rem' }}>
+  //         <Card style={{ width: '18rem' }} className="yardCard">
   //         <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
   //         <Card.Body>
   //           <Card.Title>{yard.name}</Card.Title>
@@ -50,7 +50,7 @@ function MyYards() {
     <div> 
     <MDBRow>
       <MDBCol md='4'>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem' }} className="yardCard">
       <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
       <Card.Body>
         <Card.Title>Yard Name</Card.Title>
@@ -66,7 +66,7 @@ function MyYards() {
     </Card>
       </MDBCol>
       <MDBCol md='4'>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem' }} className="yardCard">
       <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
       <Card.Body>
         <Card.Title>Yard Name</Card.Title>
@@ -82,7 +82,7 @@ function MyYards() {
     </Card>
       </MDBCol>
       <MDBCol md='4'>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem' }} className="yardCard">
       <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
       <Card.Body>
         <Card.Title>Yard Name</Card.Title>
@@ -103,7 +103,7 @@ function MyYards() {
 
     <MDBRow>
       <MDBCol md='4'>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem' }} className="yardCard">
       <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
       <Card.Body>
         <Card.Title>Yard Name</Card.Title>
@@ -119,7 +119,7 @@ function MyYards() {
     </Card>
       </MDBCol>
       <MDBCol md='4'>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem' }} className="yardCard">
       <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
       <Card.Body>
         <Card.Title>Yard Name</Card.Title>
@@ -135,7 +135,7 @@ function MyYards() {
     </Card>
       </MDBCol>
       <MDBCol md='4'>
-      <Card style={{ width: '18rem' }}>
+      <Card style={{ width: '18rem' }} className="yardCard">
       <Card.Img variant="top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Typical_suburban_backyard.jpg/220px-Typical_suburban_backyard.jpg" />
       <Card.Body>
         <Card.Title>Yard Name</Card.Title>
