@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
 const app = express();
-// const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
 // middleware
 
 
@@ -15,8 +15,8 @@ app.get("/message", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
-app.listen(3001, () => {
-  console.log(`Server is running on port 3001.`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}.`);
 });
 
 app.use(express.urlencoded({ extended: true }));
@@ -36,4 +36,4 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/YardMe', 
 //log mongo queries being executed
 mongoose.set('debug', true);
 
-// app.listen(PORT, () => console.log(`Connected on localhost:${PORT}`));
+
