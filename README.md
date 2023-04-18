@@ -17,9 +17,9 @@ Need to make some extra cash this summer? Become a YardMe Host today! This appli
 
 ### Mockup
 
-This is an image of the working application![https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This is an image of the working application![MockUP](/client/src/assets/yard-me.herokuapp.com_.png)
 
 ### Deployed Application
 
-Want to try becoming a host? Follow the link and enjoy: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Want to try becoming a host? Follow the link and enjoy: [clickhere](https://yard-me.herokuapp.com/)
 
